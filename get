@@ -15,4 +15,4 @@ mkdir -p $config_dir
 git clone https://github.com/snwfdhmp/server-install.git $config_dir
 cd $config_dir
 chmod u+x run.sh
-./run.sh ${1:-$(cat /dev/stdin)}
+./run.sh ${@:-$(cat /dev/stdin)}
