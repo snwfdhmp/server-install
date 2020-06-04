@@ -9,6 +9,9 @@ while read line; do
     [ -z "$line" ] && continue
     cmd=$(echo $line | cut -d' ' -f1)
     case $cmd in
+        \#*) echo "skipping comment $line"
+            continue
+        ;;
         ENV)
             echo export $(echo $line | cut -d' ' -f2) $(echo $line | cut -d' ' -f3-)
         ;;
