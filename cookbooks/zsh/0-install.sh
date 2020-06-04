@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt-get install -y zsh
+which zsh || apt-get install -y zsh

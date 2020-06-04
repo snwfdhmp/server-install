@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt-get install -y ufw
+which ufw || apt-get install -y ufw

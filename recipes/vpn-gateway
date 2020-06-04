@@ -12,6 +12,6 @@ COOK zsh
 ENV USER_ADMIN_SHELL /bin/zsh
 
 COOK user-admin
-COOK openssh-server
+# COOK openssh-server
 # COOK openvpn-server
 # COOK ufw
