@@ -18,7 +18,7 @@ while [[ -n "$1" ]]; do
     shift
 done
 recipe=$1
-[ -z "$recipe"] && echo "usage: $0 [options] <recipe>" && exit 1
+[ -z "$recipe" ] && echo "usage: $0 [options] <recipe>" && exit 1
 
 while read line; do
     [ -z "$line" ] && continue
