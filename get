@@ -1,7 +1,6 @@
 #!/bin/bash
 
-UID=$(id -u)
-if [ x$UID != x0 ] 
+if [ $(id -u) != 0 ] 
 then
     #Beware of how you compose the command
     printf -v cmd_str '%q ' "$0" "$@"
