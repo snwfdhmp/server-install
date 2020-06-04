@@ -29,7 +29,7 @@ while read line; do
         ;;
         ENV)
             [[ "$dry_run" -eq 1 ]] && echo "$line" && continue
-            export $(echo $line | cut -d' ' -f2) $(echo $line | cut -d' ' -f3-)
+            export $(echo $line | cut -d' ' -f2)=$(echo $line | cut -d' ' -f3-)
         ;;
         COOK)
             cookbook=$(echo $line | cut -d' ' -f2)
