@@ -1,3 +1,19 @@
 #!/bin/bash
 
-curl 
+UID=$(id -u)
+if [ x$UID != x0 ] 
+then
+    #Beware of how you compose the command
+    printf -v cmd_str '%q ' "$0" "$@"
+    exec sudo su -c "$cmd_str"
+fi
+
+# I am root
+apt-get update && apt install -y git
+
+config_dir="/etc/com.snwfdhmp.server-install/"
+mkdir -p $config_dir
+git clone https://github.com/snwfdhmp/server-install.git $config_dir
+cd $config_dir
+chmod u+x run.sh
+./run.sh $@
