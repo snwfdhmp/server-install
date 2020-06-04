@@ -4,7 +4,7 @@
 strict_mode=1
 dry_run=0
 
-while [[ -n "$1" ]]; do
+while [[ -n "$2" ]]; do
     case $1 in
         --dry-run) dry_run=1
         ;;
